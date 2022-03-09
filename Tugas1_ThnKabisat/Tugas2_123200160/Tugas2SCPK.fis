@@ -1,0 +1,63 @@
+[System]
+Name='Tugas2SCPK'
+Type='mamdani'
+Version=2.0
+NumInputs=3
+NumOutputs=3
+NumRules=1
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='Kecepatan'
+Range=[0 10]
+NumMFs=3
+MF1='Lama':'gaussmf',[1.77 -8.327e-17]
+MF2='Sedang':'gaussmf',[1.77 5]
+MF3='Gesit':'gaussmf',[1 10]
+
+[Input2]
+Name='Kebersihan'
+Range=[0 10]
+NumMFs=3
+MF1='Ceroboh':'gaussmf',[1.77 -8.327e-17]
+MF2='Sedang':'gaussmf',[1.77 5]
+MF3='Bersih':'gaussmf',[1.771 10]
+
+[Input3]
+Name='Keramahan'
+Range=[0 10]
+NumMFs=3
+MF1='Julid':'trimf',[-4.167 0 5]
+MF2='Diam':'trimf',[0.8333 5 9.167]
+MF3='Ramah':'trimf',[5 10 14.17]
+
+[Output1]
+Name='Customers'
+Range=[0 10]
+NumMFs=3
+MF1='Sedikit':'gaussmf',[1.77 -8.327e-17]
+MF2='Lumayan':'gaussmf',[1.77 5]
+MF3='Banyak':'gaussmf',[1.771 10]
+
+[Output2]
+Name='Rating'
+Range=[0 10]
+NumMFs=3
+MF1='1-2':'trimf',[0 0.96 2]
+MF2='3-4':'trimf',[2.091 3.009 3.927]
+MF3='5':'trimf',[4 4.5 5]
+
+[Output3]
+Name='Respon'
+Range=[0 10]
+NumMFs=3
+MF1='Dilupakan':'trimf',[-4.17 0 5]
+MF2='Dibicarakan':'trimf',[0.8333 5 9.167]
+MF3='Direkomendasikan':'trimf',[5 10 14.2]
+
+[Rules]
+1 1 1, 1 1 1 (1) : 1

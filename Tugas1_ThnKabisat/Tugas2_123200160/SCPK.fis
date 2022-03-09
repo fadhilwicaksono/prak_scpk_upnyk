@@ -1,0 +1,62 @@
+[System]
+Name='SCPK'
+Type='mamdani'
+Version=2.0
+NumInputs=3
+NumOutputs=3
+NumRules=0
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='Pelayanan'
+Range=[0 10]
+NumMFs=3
+MF1='Julid':'trimf',[-4.167 0 5]
+MF2='Biasa':'trimf',[0.8333 5 9.167]
+MF3='Ramah':'trimf',[5 10 14.17]
+
+[Input2]
+Name='Higenitas'
+Range=[0 10]
+NumMFs=3
+MF1='Kotor':'trimf',[-4.168 0 4.168]
+MF2='Standar':'trimf',[3.5 5 7]
+MF3='Bersih':'trimf',[5.833 10 14.17]
+
+[Input3]
+Name='Estetika'
+Range=[0 10]
+NumMFs=3
+MF1='Simple':'trimf',[-4.167 0 6]
+MF2='Standar':'trimf',[0 5 6]
+MF3='Antimainstream':'trimf',[6 10 14.17]
+
+[Output1]
+Name='Kepuasan'
+Range=[0 10]
+NumMFs=3
+MF1='Kecewa':'trimf',[-4.167 0 2]
+MF2='Biasa':'trimf',[2 5 9.167]
+MF3='Berkesan':'trimf',[6 10 14.17]
+
+[Output2]
+Name='Customer'
+Range=[0 10]
+NumMFs=3
+MF1='Sedikit':'gaussmf',[1.77 -8.327e-17]
+MF2='Normal':'gaussmf',[1 5]
+MF3='Ramai':'gaussmf',[1.771 10]
+
+[Output3]
+Name='Respon'
+Range=[0 10]
+NumMFs=3
+MF1='Dilupakan':'gaussmf',[1.308 -1.39e-16]
+MF2='Biasa':'gaussmf',[2.59431923151358 5]
+MF3='Direkomendasikan':'trimf',[8.97007042253521 10 14.2]
+
+[Rules]
